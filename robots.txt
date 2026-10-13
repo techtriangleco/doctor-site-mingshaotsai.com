@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mingshaotsai.com/sitemap.xml

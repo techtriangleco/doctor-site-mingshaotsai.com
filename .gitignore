@@ -16,8 +16,9 @@ $RECYCLE.BIN/
 *.swp
 *~
 
-# Claude Code 本機設定
-.claude/settings.local.json
+# Claude Code 工作檔：GitHub Pages 會公開 repo 內所有檔案
+.claude/
+plans/
 
 # Node（之後若加入建置工具）
 node_modules/
