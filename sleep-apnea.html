@@ -356,6 +356,9 @@ class Component extends DCLogic {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal, .stagger').forEach(el => this._io.observe(el));
+    // 內容是 runtime 渲染完才出現，瀏覽器載入時找不到 hash 目標，要在這裡自己捲過去
+    const target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView();
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
